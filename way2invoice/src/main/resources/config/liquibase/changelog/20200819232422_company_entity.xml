@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+    <property name="autoIncrement" value="true"/>
+
+    <!--
+        Added the entity AccountTaxInfo.
+    -->
+    <changeSet id="20200819232422-1" author="palmuruganc">
+        <createTable tableName="company">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(125)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="city" type="varchar(125)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="state_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="country_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="address" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="contact_name" type="varchar(125)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="phone" type="varchar(125)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="varchar(125)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="gstin" type="varchar(125)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="tax_type" type="varchar(25)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="currency_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="varchar(12)">
+                <constraints nullable="false"/>
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <changeSet id="20200819232422-2" author="palmuruganc">
+
+        <addForeignKeyConstraint baseColumnNames="state_id"
+            baseTableName="company"
+            constraintName="fk_company_state_id"
+            referencedColumnNames="id"
+            referencedTableName="state"/>
+
+        <addForeignKeyConstraint baseColumnNames="country_id"
+            baseTableName="company"
+            constraintName="fk_company_country_id"
+            referencedColumnNames="id"
+            referencedTableName="country"/>
+
+        <addForeignKeyConstraint baseColumnNames="currency_id"
+            baseTableName="company"
+            constraintName="fk_company_currency_id"
+            referencedColumnNames="id"
+            referencedTableName="currency"/>
+
+    </changeSet>
+
+</databaseChangeLog>

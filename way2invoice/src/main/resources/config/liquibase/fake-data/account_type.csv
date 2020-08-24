@@ -1,0 +1,5 @@
+id;name;code;status
+1;Asset;ASSET;ACTIVE
+2;Customer;CUSTOMER;ACTIVE
+3;Vendor;VENDOR;ACTIVE
+4;Expense;EXPENSE;ACTIVE

@@ -1,0 +1,11 @@
+id;date;due_date;total;balance;carried_balance;discount;is_percentage;notes;status
+1;2020-06-04;2020-06-04;85235;13062;25156;29354;true;Table;DEACTIVE
+2;2020-06-04;2020-06-05;30348;64379;78406;52363;false;reboot Rhode Island bypassing;ACTIVE
+3;2020-06-05;2020-06-05;29319;77772;59283;58135;true;Florida Home Loan Account;DEACTIVE
+4;2020-06-05;2020-06-05;71595;73808;24198;87472;true;Engineer intuitive experiences;ACTIVE
+5;2020-06-04;2020-06-05;92121;74564;84021;83962;true;Buckinghamshire Director Gloves;ACTIVE
+6;2020-06-04;2020-06-04;2286;13945;85471;6085;true;black Awesome;ACTIVE
+7;2020-06-05;2020-06-05;89852;2473;32458;45702;true;matrix Internal;DEACTIVE
+8;2020-06-04;2020-06-05;30873;5232;18406;97975;true;compressing Iceland deposit;ACTIVE
+9;2020-06-05;2020-06-04;58826;2028;55962;11771;false;back up Toys;DEACTIVE
+10;2020-06-05;2020-06-05;40069;75705;42371;84214;false;pixel;DEACTIVE

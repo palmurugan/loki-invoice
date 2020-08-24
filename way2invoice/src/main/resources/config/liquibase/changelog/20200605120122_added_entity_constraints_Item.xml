@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Item.
+    -->
+    <changeSet id="20200605120122-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="item_price_id"
+                                 baseTableName="item"
+                                 constraintName="fk_item_item_price_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="item_price"/>
+
+        <addForeignKeyConstraint baseColumnNames="item_type_id"
+                                 baseTableName="item"
+                                 constraintName="fk_item_item_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="item_type"/>
+
+        <addForeignKeyConstraint baseColumnNames="unit_id"
+                                 baseTableName="item"
+                                 constraintName="fk_item_unit_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="unit"/>
+
+        <addForeignKeyConstraint baseColumnNames="tax_id"
+                                 baseTableName="item"
+                                 constraintName="fk_item_tax_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tax"/>
+
+    </changeSet>
+</databaseChangeLog>

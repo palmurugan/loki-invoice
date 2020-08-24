@@ -1,0 +1,9 @@
+export { default as TotalSales } from './TotalSales';
+export { default as LatestOrders } from './LatestOrders';
+export { default as LatestProducts } from './LatestProducts';
+export { default as LatestSales } from './LatestSales';
+export { default as TasksProgress } from './TasksProgress';
+export { default as TotalProfit } from './TotalProfit';
+export { default as TotalPurchase } from './TotalPurchase';
+export { default as TotalExpense } from './TotalExpense';
+export { default as UsersByDevice } from './UsersByDevice';

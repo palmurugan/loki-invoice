@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #f4f6f8;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+#root {
+  height: 100%;
+}
+
+/* Custom CSS changes */
+.rightAlign {
+  justify-content: flex-end;
+}
+
+.makeStyles-drawer-36 {
+  height: calc(100% - 64px);
+  margin-top: 50px !important;
+}
+
+.makeStyles-root-1 {
+  height: 100%;
+  padding-top: 48px !important;
+}
+
+.MuiToolbar-regular {
+    min-height: 48px !important;
+}
+
+.makeStyles-drawer-8 {
+  height: calc(100% - 64px) !important;
+  margin-top: 50px !important;
+}
+
+.makeStyles-root-38 {
+  padding: 5px 0px 0px 15px !important;
+}
+
+.MuiTableHead-root {
+  display: table-header-group;
+  background-color: #ffffff !important;
+}
+
+.MuiTableCell-head {
+  font-weight: 600 !important;
+}
+
+/* Dashboard Card padding */
+.MuiCardContent-root {
+    padding: 10px !important;
+}

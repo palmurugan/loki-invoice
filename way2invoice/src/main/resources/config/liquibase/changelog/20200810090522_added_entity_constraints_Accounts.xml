@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Accounts.
+    -->
+    <changeSet id="20200810090522-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="account_tax_info_id"
+                                 baseTableName="accounts"
+                                 constraintName="fk_accounts_account_tax_info_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="account_tax_info"/>
+
+        <addForeignKeyConstraint baseColumnNames="account_type_id"
+                                 baseTableName="accounts"
+                                 constraintName="fk_accounts_account_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="account_type"/>
+
+        <addForeignKeyConstraint baseColumnNames="account_group_id"
+                                 baseTableName="accounts"
+                                 constraintName="fk_accounts_account_group_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="account_group"/>
+
+    </changeSet>
+</databaseChangeLog>

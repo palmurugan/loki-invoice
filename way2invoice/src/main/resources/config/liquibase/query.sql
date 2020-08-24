@@ -1,0 +1,1 @@
+insert into company(name, city, state_id,country_id,address,contact_name,phone,email,gstin,tax_type,currency_id,status) values ('My Company', 'Kazakootam', 2, 1, 'KKRA-4A', 'Priyanka', '9944111436', 'priyankapalmurugan@gmail.com', 'GST123456789', 'GST', 1, 'ACTIVE');

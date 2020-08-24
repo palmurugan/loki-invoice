@@ -1,0 +1,81 @@
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+  <property name="autoIncrement" value="true"/>
+
+  <!--
+    Added the entity Purchase Order
+  -->
+  <changeSet id="20200708223000-1" author="palmuruganc">
+    <createTable tableName="purchase_order">
+      <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+      <column name="customer_id" type="bigint">
+        <constraints nullable="false"/>
+      </column>
+      <column name="billing_type_id" type="bigint">
+        <constraints nullable="false"/>
+      </column>
+      <column name="currency_id" type="bigint">
+        <constraints nullable="false"/>
+      </column>
+      <column name="active_since" type="date">
+        <constraints nullable="false"/>
+      </column>
+      <column name="active_until" type="date">
+        <constraints nullable="true"/>
+      </column>
+      <column name="cycle_start" type="date">
+        <constraints nullable="true"/>
+      </column>
+      <column name="next_billable_day" type="date">
+        <constraints nullable="true"/>
+      </column>
+      <column name="due_date" type="date">
+        <constraints nullable="false"/>
+      </column>
+      <column name="notify" type="boolean">
+        <constraints nullable="true"/>
+      </column>
+      <column name="created_by" type="varchar(50)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="created_date" type="timestamp">
+        <constraints nullable="false"/>
+      </column>
+      <column name="updated_by" type="varchar(50)">
+        <constraints nullable="true"/>
+      </column>
+      <column name="updated_date" type="timestamp">
+        <constraints nullable="true"/>
+      </column>
+      <column name="status" type="varchar(12)">
+        <constraints nullable="false"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet id="20200708223000-2" author="palmuruganc">
+    <addForeignKeyConstraint baseColumnNames="customer_id"
+      baseTableName="purchase_order"
+      constraintName="fk_purchase_order_customer_id"
+      referencedColumnNames="id"
+      referencedTableName="customer"/>
+
+    <addForeignKeyConstraint baseColumnNames="billing_type_id"
+      baseTableName="purchase_order"
+      constraintName="fk_purchase_order_billing_type_id"
+      referencedColumnNames="id"
+      referencedTableName="billing_type"/>
+
+    <addForeignKeyConstraint baseColumnNames="currency_id"
+      baseTableName="purchase_order"
+      constraintName="fk_purchase_order_currency_id"
+      referencedColumnNames="id"
+      referencedTableName="currency"/>
+  </changeSet>
+
+</databaseChangeLog>
